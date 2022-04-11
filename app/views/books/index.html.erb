@@ -1,14 +1,14 @@
 <div>
 <h1>User info</h1>
-<%= image_tag @books.user.get_profile_image(100, 100) %>
+<%= image_tag @user.get_profile_image(100, 100) %>
 <tbody>
   <tr>
     <th>name<th>
-    <th><%= @books.user.name %></th>
+    <th><%= @user.name %></th>
   </tr>
   <tr>
     <th>introduction</th>
-    <th><%= @books.user.introduction %></th>
+    <th><%= @user.introduction %></th>
   </tr>
 </tbody>
 </div>
@@ -22,3 +22,10 @@
 
 <%= f.submit 'Create Book' %>
 <% end %>
+
+<div>
+  <% @books.each do |book| %>
+  <div>
+    
+  </div>
+</div>

@@ -1,4 +1,19 @@
-<h1>welcome to Bookers !!</h1>
-<p>In Bookers, <br>
-you can share and exchange your opiniones, inpressions, and emotions<br>
-about various books!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-11 mx-auto">
+      <h1>welcome to Bookers !!</h1>
+      <p>In Bookers, <br>
+      you can share and exchange your opiniones, inpressions, and emotions<br>
+      about various books!</p>
+
+      <div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <%= link_to "Log in", new_user_session_path, class: "btn btn-blue" %>
+        </div>
+        <div class="row">
+          <%= link_to "Sign up", new_user_registration_path, class: "btn-btn-green" %>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
