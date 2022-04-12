@@ -13,6 +13,8 @@
 </tbody>
 </div>
 
+<div><%= link_to "edit", edit_user_path(@user.id) %></div>
+
 <div>
 <% @books.each do |book| %>
 <div>
@@ -26,7 +28,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= image_tag book.get_profile_image %></td>
+        <td><%= image_tag book.user.get_profile_image(100, 100) %></td>
       </tr>
       <tr>
         <td><%= book.title %></td>
