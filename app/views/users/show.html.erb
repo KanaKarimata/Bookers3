@@ -1,37 +1,31 @@
-<div>
-<h1>User info</h1>
-<%= image_tag @user.get_profile_image(100, 100) %>
-<tbody>
-  <tr>
-    <th>name<th>
-    <th><%= @user.name %></th>
-  </tr>
-  <tr>
-    <th>introduction</th>
-    <th><%= @user.introduction %></th>
-  </tr>
-</tbody>
-</div>
-
-<div><%= link_to "edit", edit_user_path(@user.id) %></div>
-
+<div class="container">
+<%= render 'list', book: @book %>
 <div>
 <% @books.each do |book| %>
 <div>
-  <table>
+  <h2>Books</h2>
+  <table class="table">
     <thead>
       <tr>
-        <td></td>
-        <td>Title</td>
-        <td>Opinion</td>
+        <th></th>
+        <th>Title</th>
+        <th>Opinion</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><%= image_tag book.user.get_profile_image(100, 100) %></td>
+        <td>
+          <%= link_to user_path(book.id) do %>
+           <%= image_tag book.user.get_profile_image(100, 100) %>
+          <% end %>
+        </td>
       </tr>
       <tr>
-        <td><%= book.title %></td>
+        <td>
+          <%= link_to book_path(book.id) do %>
+           <%= book.title %>
+          <% end %>
+        </td>
       </tr>
       <tr>
         <td><%= book.body %><td>
@@ -41,4 +35,5 @@
   <% end %>
 </div>
 
+</div>
 </div>
